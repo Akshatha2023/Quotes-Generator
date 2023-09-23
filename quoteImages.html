@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #display-image{
+        width: 200px;
+        height: 300px;
+       
+    }
+  </style>
+</head>
+<body>
+   <center>
+    <div>
+        <img id="display-image" src="../Web Knight bite/app-menu.webp" alt="">
+    </div>
+    <button onclick="generateRandomeIndex()">change image</button>
+   </center>
+    <script>
+        let image_addressArray=[
+            "https://www.hdwallpaper.nu/wp-content/uploads/2015/05/quotes-about-life-hd-desktop-wallpaper-series-quote-wallpaper.jpg",
+            "https://www.dailyfunnyquote.com/wp-content/uploads/2019/10/Motivational-quotes-about-life-beautiful-quotes-on-life.jpg",
+            "http://webneel.com/daily/sites/default/files/images/daily/07-2015/10-inspirational-life-quotes.jpg","https://www.tentaran.com/wp-content/uploads/2019/07/apj-abdul-kalam-quotes-12.jpg",
+            "https://assets.wallpapersin4k.org/uploads/2017/04/Swami-Vivekananda-HD-Wallpapers-With-Quotes-2.jpeg","https://littlenivi.com/wp-content/uploads/2019/03/100-Inspirational-Buddha-Quotes-And-Sayings-That-Will-Enlighten-You-31.jpg",
+            
+        ]
+
+        function generateRandomeIndex(){
+            let displayImageElement=document.getElementById ("display-image")
+            let rn=Math.trunc(Math.random()*6);
+            for(let i=1;i<2;i++){
+                let image=image_addressArray[rn];
+                displayImageElement.src=image
+            }
+        }
+    </script>
+    
+</body>
+</html>
